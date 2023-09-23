@@ -167,8 +167,8 @@ if __name__ == '__main__':
 
     repeated_v = 0
     last_v = math.inf
-    for _ in range(100_000):
-        if _ and _ % 1000 == 0:
+    for _ in range(100_000_000_000):
+        if _ and _ % 10000 == 0:
             print(f"Current Generation: {_}\n\tBest: {heap[0]} -> Mean: {get_mean(heap)}")
 
         internal_heap = []
@@ -190,7 +190,7 @@ if __name__ == '__main__':
 
         if last_v == best_from_gen[0]:
             repeated_v += 1
-            if repeated_v >= 10:
+            if repeated_v >= 200:
                 break
         else:
             last_v = best_from_gen[0]
